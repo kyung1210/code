@@ -1,0 +1,38 @@
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css");
+body {
+    font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+    font-size: 17px;
+    font-weight: 400;
+    color: #3d3d3d;
+    line-height: 1.5;
+}
+.wrapper {
+    width: 1260px;
+    margin: 0 auto; /* 위, 아래 여백 없음 -  좌우 여백 알아서 반반, f12 가로 스크롤바 생김, 여백 특별법 */
+}
+/* 브라우저에서 주는 스타일을 제거 -- 스타일 최화라고함*/       
+* {
+    margin: 0; /* 와일드 카드 모든 태그에 적용, 여백은 래퍼 선택자가 우선 순위, 개발모드 확인, 일반법*/
+}
+h1, h2, h3, h4, h5, h6 {
+    font-size: inherit; /* 브라우저 속성 안받고 body 값 상속 받음*/
+    font-weight: inherit;
+}
+strong {
+    font-weight: inherit;
+}
+h2 {
+    font-size: 40px;
+    font-weight: 700;
+    color: #1d1d1d;
+    margin: 105px 0 30px 0;
+}
+.sub_tit {
+    font-size: 24px;
+    font-weight: 700;
+    color: #1d1d1d;
+    margin: 0 0 15px 0;
+}
+strong {
+    color: #003b83;
+}
