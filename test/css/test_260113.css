@@ -21,18 +21,53 @@ h1, h2, h3, h4, h5, h6 {
 strong {
     font-weight: inherit;
 }
-h2 {
+.blue h2 {
     font-size: 40px;
     font-weight: 700;
     color: #1d1d1d;
     margin: 105px 0 30px 0;
 }
-.sub_tit {
+.blue h2 .sub_tit {
     font-size: 24px;
     font-weight: 700;
     color: #1d1d1d;
     margin: 0 0 15px 0;
 }
-strong {
+.blue h2 .sub_tit strong {
     color: #003b83;
 }
+.red {text-align: center;
+}
+.red h2 {
+    font-size: 45px;
+    font-weight: 800;
+    color: #ef2727;
+    margin: 105px 0 30px 0;
+} 
+.red .sbu_tit {
+    font-size: 22px;
+    color: #1d1d1d;
+    margin: 105px 0 30px 0;
+}
+.red .sbu_tit strong {
+    font-weight: 800;
+    color: #ef2727;
+}
+
+ h2.esg{
+    font-size: 40px;
+    font-weight: 700;
+    color: #1d1d1d;
+    margin: 105px 0 0 0;
+}  
+.esg h3 {
+    font-weight: 700;
+    color: #1d1d1d;
+    font-size: 24px;
+    margin: 36px 0 14px 0;
+} 
+.esg h3 strong{
+    font-weight: 400;
+    color: #003b83;
+}
+
