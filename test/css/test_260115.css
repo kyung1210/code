@@ -134,6 +134,14 @@ li들 중에는 bg2라는 클래스명을 갖는 li를 이야기함*/
     align-items: center;
     padding: 0 100px;
 }
+.emp .tit h2{
+    color: #00664f;
+    font-weight: 700;
+    padding: 6px 22px;
+    display: inline-block;
+    margin: 20px 0 0 0;
+    border-radius: 30px;
+}
 body {
     margin: 0 0 150px 0;
 }
