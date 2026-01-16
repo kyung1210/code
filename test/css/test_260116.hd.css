@@ -1,0 +1,116 @@
+@import url(pretendard.css);
+/****************** Start : 태그의 초기화 **********/
+h1,h2,h3,h4,h5,h6{
+    font-weight: inherit;
+    font-size: inherit;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+a{
+    color: inherit;
+    text-decoration: none;/*밑줄삭제*/
+}
+ul,ol,li {
+    list-style: none;/*앞에 도형 제거*/
+}
+/****************** End : 태그의 초기화 **********/
+/****************** Start : 기본스타일 **********/
+body{
+    font-family: 'pretendard';
+    font-size: 17px;
+    font-weight: 400;
+    color: #3d3d3d;
+    line-height: 1.5;
+}
+.wrapper{
+    width: 1260px;
+    margin: 0 auto;
+}
+/****************** End : 기본스타일 **********/
+.visual{
+    background: url(../images/hd_visual.jpg) no-repeat center center / cover;
+    color: #fff;
+    height: 785px;
+}
+.visual h2 {
+    font-size: 60px;
+    font-weight: 700;
+    padding: 270px 0 27px 0;
+}
+.biz h2 {
+    font-size: 40px;
+    font-weight: 700;
+    color: 1d1d1d;
+    margin: 115px 0 35px 0;
+}
+.biz .list ul {
+    display: flex;
+    justify-content: space-between;
+}
+.biz .list ul li{
+    width: 404px;
+}
+.biz .list ul li a{
+    display: block;
+}
+.biz .list ul li a h3{
+    font-size: 24px;
+    font-weight: 700;
+    color: 1d1d1d;
+    margin: 10px 0 0 0 ;
+}
+.heri{
+    margin: 80px 0 0 0 ;
+    background: url(../images/hd\ _heri이미지.jpg) no-repeat center center /cover;
+    color: #fff;
+    height: 548px;
+}.heri .wrapper{
+    padding: 170px 0 0 642px;
+}
+.heri h2{
+    font-size: 40px;
+    font-weight: 700;
+    margin: 0 0 19px 0; 
+}
+.heri a{
+    display: inline-block;
+    background-color: #003087;
+    margin: 40px 0 0 0 ;
+    padding: 11px 28px;
+    border-radius: 30px;
+}
+.sust{
+    text-align: center;
+}.sust h2{
+    font-size: 24px;
+    font-weight: 700;
+    color: #003087;
+    margin: 158px 0 20px 0;
+}
+
+.sust .sub_tit{
+    font-size: 40px;
+    font-weight: 700;
+    margin: 0 0 20px 0; 
+    color: #1d1d1d
+
+} 
+.sust a{
+    display: inline-block;
+    background-color: #003087;
+    margin: 31px 0 0 0 ;
+    padding: 11px 28px;
+    border-radius: 30px;
+    color: #fff;
+}
+
+body{
+
+}
+
+
+
+
