@@ -10,6 +10,12 @@ a {
 ul, ol, li {
     list-style: none;
 }
+strong {
+    font-weight: inherit;
+}
+em, address {
+    font-style: normal;/* 기울어진 글자를 바르게*/
+}
 * {
     margin:0 ;
     padding: 0;
@@ -27,5 +33,9 @@ body {
 .wrapper {
     width: 1260px;
     margin: 0 auto; /* 가운데 정렬 */
+}
+#wrap {
+    /* 1260+30+30 =1320*/
+    min-width: 1320px;
 }
 
