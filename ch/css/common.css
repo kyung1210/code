@@ -1,0 +1,41 @@
+/* 태그의 초기화 텍스터 앞 점, 숫자*/
+h1,h2,h3,h4,h5,h6 {
+    font-size: inherit;
+    font-weight: inherit;
+}
+a {
+    color: inherit;
+    text-decoration: inherit;
+}
+ul, ol, li {
+    list-style: none;
+}
+strong {
+    font-weight: inherit;
+}
+em, address {
+    font-style: normal;/* 기울어진 글자를 바르게*/
+}
+* {
+    margin:0 ;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* 공통스타일*/
+body {
+    font-family: 'Pretendard', sans-serif;
+    font-size: 17px;
+    font-weight: 400;
+    color: #3d3d3d;
+    line-height: 1.5;
+    word-break: keep-all;/*단어단위로 줄바꿈*/
+}
+.wrapper {
+    width: 1260px;
+    margin: 0 auto; /* 가운데 정렬 */
+}
+#wrap {
+    /* 1260+30+30 =1320*/
+    min-width: 1320px;
+}
+
