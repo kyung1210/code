@@ -1,0 +1,225 @@
+@import url(fonts.css);
+@import url(common.css);
+.header {
+    height: 100px;
+}
+.header {
+	height: 100;
+	display: flex;
+	justify-content: space-between;
+    margin: 0 40px 0 50px;
+} 
+.header .logo {
+    margin: 24px 0 0 0;
+}
+.header .gnb ul {
+    display: flex;
+}
+.header .gnb ul li a{
+    display: block;
+    line-height: 100px;
+    font-size: 20px;
+    font-weight: 700;
+    color: #191e26;
+    padding: 0 32px;
+}
+.header .gnb ul li a:hover{
+    color: #BD0100;
+}
+
+
+.visual {
+    background: url(../images/visual_bg.jpg) no-repeat center center /cover;
+    color: #fff;
+    height: 920px;
+    margin: 0 40px;
+    border-radius: 30px;
+}
+.visual .wrapper {
+    padding: 0 0 0 40px;
+}
+.visual h2{
+    font-size: 60px;
+    font-weight: 700;
+    color: #fff;
+    line-height: 1.3;
+    padding: 434px 0 23px 0;
+}
+.biz{
+    margin: 179px 0 158px 0
+}
+.biz .art{
+    margin: 101px 0 0 0;
+}
+.biz .group{
+    display: flex;/* tit-photo*/
+    justify-content: space-between;
+}
+.biz .group .tit {
+    width: 510px;
+    margin: 20px 0 0 0;
+}
+.biz .group .tit h3{
+    color: #BD0100;
+}
+.biz .group .tit .sub_tit {
+    font-size: 40px;
+    font-family: 700;
+    color: #191e26;
+    line-height: 1.3;
+    margin: 13px 0 23px 0;
+}
+.biz .group .tit .sub_tit strong {
+    color: #BD0100;
+}
+.biz .group .tit .btn_wrap{
+    display: flex;/*a를 좌우배치*/
+    margin: 28px 0 0 0;
+    gap: 6px 6px;
+    flex-wrap: wrap;/*flex정렬되는 a가 두줄로 정렬되는 것을 허락*/
+}
+.biz .group .tit .btn_wrap a{
+    display: block;
+    color: #BD0100;
+    border: 1px solid #BD0100;
+    padding: 12px 35px;
+    border-radius: 30px;
+}
+/*<a></a>
+  <a></a>
+  <a class="active"></a> a.active라는 선택자 a들 중에서 active 클래스가 있는 a를 뜻함
+
+  <a><strong class="actice"></strong></a>
+  이런 식으로 a안에 actice 를 클래스가 별도로 있는 것을 이야기함
+  */
+.biz .group .tit .btn_wrap a.active{
+    background-color: #BD0100;
+    color: #fff;
+}
+.biz .group .tit .btn_wrap a:hover{
+    background-color: #fff;
+    font-weight: 700;
+}
+.biz .group .tit .btn_wrap a.active:hover{
+    color: #BD0100;
+}
+.biz .group .photo{
+    width: 618px;
+    height: 487px;
+    overflow: hidden;
+    border-radius: 20px;
+}
+.biz .group .photo img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.community{
+    background: url(../images/community_bg.jpg) no-repeat center top;
+    color: #fff;
+ }
+.community .notice{
+    padding: 175px 0 170px 0;
+    display: flex;
+    justify-content: space-between;
+}
+.community .notice .tit h3{
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 1.3;
+    margin: 11px 0 0 0;
+}
+.community .notice .list{
+    width: 832px;
+}
+.community .notice .list ul li{
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+}
+.community .notice .list ul li:first-child{
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+}
+.community .notice .list ul li a{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 26px 0;
+}
+.community .notice .list ul li a:hover{
+    color: #ebe2b7;
+}
+.community .notice .list ul li a h4{
+    font-size: 18px;
+    font-weight: 700px;
+}
+.community .notice .list ul li a span{
+    color: rgba(255, 255, 255, 0.8);
+}
+.community .notice .list ul li a:over span{
+    color: #ebe2b7;
+}
+.community .youtube .tit h3{
+    color: #fff;
+    font-size: 32px;
+}
+.community .youtube .tit p{
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 1.3;
+    margin: 11px 0 0 0;
+}
+.community .youtube .list{
+    margin: 45px 0 0 0;
+}
+.community .youtube .list ul{
+    display: flex;
+    justify-content: space-between;
+}
+.community .youtube .list ul li{
+    width: 404px;
+}
+.community .youtube .list ul li a{
+    display: block;
+    color: #191e26;
+}
+.community .youtube .list ul li a .photo{
+    height: 227px;
+    border-radius: 10px;
+    border: 2px solid #af143c;
+    overflow: hidden;
+}
+.community .youtube .list ul li a .photo img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.5s;
+}
+.community .youtube .list ul li a:hover .photo img{
+    transform: scale3d(1.125, 1.125, 1);
+}
+.community .youtube .list ul li a .photo h4{
+    font-size: 18px;
+    line-height: 1.3;
+    font-weight: 700;
+    color: #191e26;
+    margin: 18px 0 0 0;
+}
+
+
+
+
+.footer{
+    background-color: #1d1d1d;
+    color: #fff;
+    margin: 140px 0 0 0;
+    padding: 50px 0 65px 0;
+ } 
+ .footer .f_nav ul{
+    display: flex;
+    gap: 0 36px;
+ }   
+ .footer .f_info{
+    margin: 26px 0 21px 0;
+    display: flex;
+    gap: 0 16px;
+ }
+    
