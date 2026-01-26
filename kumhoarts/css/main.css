@@ -122,6 +122,7 @@
     padding: 175px 0 170px 0;
     display: flex;
     justify-content: space-between;
+    position: relative;/* more 정렬 기준*/
 }
 .community .notice .tit h3{
     font-size: 40px;
@@ -157,6 +158,19 @@
 .community .notice .list ul li a:over span{
     color: #ebe2b7;
 }
+.community .notice .more{
+    position: absolute;/*notice를 기준으로 정렬*/
+    left: 0;
+    top: 370px;
+    border: 1px solid #fff;
+    border-radius: 30px;
+    padding: 12px 34px;
+}
+.community .notice .more:hover{
+    background-color: #fff;
+    color: #BD0100;
+}
+    
 .community .youtube .tit h3{
     color: #fff;
     font-size: 32px;
@@ -166,6 +180,25 @@
     font-weight: 700;
     line-height: 1.3;
     margin: 11px 0 0 0;
+}
+.community .youtube .more:hover{
+    background-color: #fff;
+    color: #BD0100;
+}
+.community .youtube{
+    position: relative;
+}
+.community .youtube .more{
+    position: absolute;/*notice를 기준으로 정렬*/
+    left: 0;
+    top: 370px;
+    border: 1px solid #fff;
+    border-radius: 30px;
+    padding: 12px 34px;
+}
+.community .youtbe .more:hover{
+    background-color: #fff;
+    color: #BD0100;
 }
 .community .youtube .list{
     margin: 45px 0 0 0;
@@ -203,9 +236,18 @@
     color: #191e26;
     margin: 18px 0 0 0;
 }
-
-
-
+    .community .notice .more{
+    position: absolute;/*notice를 기준으로 정렬*/
+    left: 0;
+    top: 370px;
+    border: 1px solid #fff;
+    border-radius: 30px;
+    padding: 12px 34px;
+}
+.community .notice .more:hover{
+    background-color: #fff;
+    color: #BD0100;
+}
 
 .footer{
     background-color: #1d1d1d;
@@ -222,4 +264,42 @@
     display: flex;
     gap: 0 16px;
  }
+ .footer .f_nav ul li{
+    position: relative;
+ }
+.footer .f_nav ul li::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 5px;
+    width: 1px;
+    height: 13px;
+    background-color: rgba(101, 120, 131, 0.5);
+ }
+ .footer .f_nav ul li:first-child::before{
+    display: none;
+ }
+ .footer.f_nav ul li a{
+    display: block ;
+    position: relative;
+}
+ .footer .f_nav ul li a::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+    width: 0;
+    height: 1px;
+    background-color: #656f83;
+    transition: 0.3s;
+ }
+ .footer .f_nav ul li a:hover::after{
+    width: 100%;
+ }
+ .footer .f_info{
+    margin: 26px 0 21px 0;
+    display: flex;
+    gap: 0 16px;
+ }
+
     
