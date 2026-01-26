@@ -270,8 +270,8 @@
 .footer .f_nav ul li::before{
     content: "";
     position: absolute;
-    left: 0;
-    top: 5px;
+    left: -14px;
+    top: 7px;
     width: 1px;
     height: 13px;
     background-color: rgba(101, 120, 131, 0.5);
