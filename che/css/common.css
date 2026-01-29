@@ -1,29 +1,7 @@
-/* 태그의 초기화 텍스터 앞 점, 숫자*/
-h1,h2,h3,h4,h5,h6 {
-    font-size: inherit;
-    font-weight: inherit;
-}
-a {
-    color: inherit;
-    text-decoration: none;
-}
-ul, ol, li {
-    list-style: none;
-}
-strong {
-    font-weight: inherit;
-}
-em, address {
-    font-style: normal;/* 기울어진 글자를 바르게*/
-}
-* {
-    margin:0 ;
-    padding: 0;
-    box-sizing: border-box;
-}
-/* 공통스타일*/
+/* 홈페이지 전체 공통스타일에 들아거(layout.css)라고도함
+프로젝트마다 변경됨, 이 css 속성을 수정하면 전체 프로젝트 비틀어짐*/
 body {
-    font-family: "Noto Sans KR", sans-serif;
+    font-family: "Paperozi", sans-serif;
     font-size: 17px;
     font-weight: 400;
     color: #3d3d3d;
@@ -35,8 +13,21 @@ body {
     margin: 0 auto; /* 가운데 정렬 */
 }
 #wrap {
-    /* 1260+30+30 =1320*/
-    min-width: 1320px;
+    /* 1260+100+100 =1460*/
+    min-width: 1460px;
+    
+}
+@media screen and (max-width: 768px){
+    body{
+        font-size: 16px;
+    }
+    .wrapper{
+        width: auto;
+        margin: 0 16px;
+    }
+    #wrap{
+        min-width: 0;
+    }
 }
 
 /* hhtml 표준상 입력해야하는 태그이지만 홈페이지에 나오지 않는

@@ -3,14 +3,58 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/res_260127.css">
     <title>반응형 테스트</title>
 </head>
 <body>
-    svg 저장 글자 
-    <img srcset="images/res_txt01.svg" alt=""><br><br>
-
-    <img srcset="images/res_txt02.jpg" alt=""><br><br>
-    
-    <img srcset="images/res_txt03.jpg" alt=""><br><br>
+    <div id="wrap">
+        <div class="biz">
+            <div class="wrapper">
+                <!--하나의 요소에 class명은 여러게 가능
+                music이라고 불러도 되고 group라고 불러도 됨
+                id 는 무조건 하나만 줄 수 있음-->
+                <div class="music group">
+                    <div class="tit">
+                        <h2>Music Initiatives</h2>
+                        <p class="sub_tit"></p>
+                        <p>음악 영재의 꿈을 향한 선율, 
+                        금호가 키워내는 내일의 거장</p>
+                        <div class="btn_wrap">
+                          <a href="#n" class="active">음악영재 발굴ㆍ 지원</a>
+                          <a href="#n">문화예술교육</a>
+                          <a href="#n">클래식 공연지원</a>
+                        </div><!--btn_wrap-->
+                    </div><!--tit-->
+                    <div class="photo"><img src="images/biz01.jpg" alt="악기하는 모습"></div><!--photo-->
+                </div><!--music group-->
+                <div class="art group">
+                     <div class="tit">
+                        <h2>Art Initiaves</h2>
+                        <p class="sub_tit"></p>
+                        <p>일상의 경계를 넓히는 시선, 
+                        현대 미술의 새로운 영감</p>
+                        <div class="btn_wrap">
+                          <a href="#n" class="active">신진작가 발굴 ㆍ지원원</a>
+                          <a href="#n">공모사업 ㆍ기획전시</a>
+                          <a href="#n">소장품 수집 및 보존</a>
+                        </div><!--//btn_wrap-->
+                     </div><!--//tit-->
+                     <div class="photo"><img src="images/biz02.jpg" alt="그림그리는 모습"></div><!--photo-->
+               </div><!--//art group-->
+           </div><!--//wrapper-->
+       </div><!--//biz-->
+       <div class="photo_wrap">
+         <div class="wrapper">
+            <h2>높이를 고정 - 이미지는 짤림(비율에 맞게 조정)</h2>
+            <div class="photo_hfix"><img src="images/photo1.jpg" alt=""></div>
+            <h2>높이 고정 - 이미지 전체 다나옴 이미지 찌그러짐</h2>
+            <div class="photo_resize"><img src="images/1600.jpg" alt=""></div>
+            <h2>이미지가 짤리지 않고 비율에 맞게 다 나옴(사용금지 접근성 위배)</h2>
+            <div class="photo_font"><img src="images/1600.jpg" alt=""></div>
+            <h2>이미지가 짤리지 않고 비율에 맞게 다 나옴</h2>
+            <div class="photo_all"><img src="images/1600.jpg" alt=""></div>
+         </div><!--//wrapper-->
+       </div><!--photo_wrap-->
+    </div><!--//wrap-->
 </body>
 </html>

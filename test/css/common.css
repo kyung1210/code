@@ -3,27 +3,37 @@ h1,h2,h3,h4,h5,h6 {
     font-size: inherit;
     font-weight: inherit;
 }
+/*브라우저 앵커시 기본 색상 상속, 밑줄 삭제로 초기화*/
 a {
     color: inherit;
     text-decoration: none;
 }
+/* 리스트 설정시 문자 앞 점을 삭제*/
 ul, ol, li {
     list-style: none;
 }
+/*글씨 굵게*/
 strong {
     font-weight: inherit;
 }
 em, address {
     font-style: normal;/* 기울어진 글자를 바르게*/
 }
+/*브라우저 기본 여백등 초기화*/
 * {
     margin:0 ;
     padding: 0;
-    box-sizing: border-box;
+    box-sizing: border-box;/*여백 주어도 싸고 있는 외부 박스는 변동 금지*/
 }
-/* 공통스타일*/
+
+
+
+
+
+/* 공통스타일 공통 스타일 공통 스타일 공통 스타일 공통 스타일 공통 스타일 공통 스타일 공통스타일 공통스타일
+공통스타일 공통스타일 공통스타일 공통스타일 공통스타일 공통스타일 공통스타일 공통스타일 공통스타일*/
 body {
-    font-family: "Noto Sans KR", sans-serif;
+    font-family: "pretendard", sans-serif;
     font-size: 17px;
     font-weight: 400;
     color: #454b52;
@@ -52,4 +62,16 @@ body {
     white-space: nowrap !important;
     border: 0 !important;
 }
-
+@media screen and (max-width:768px){
+                    body {
+                    font-size: 16px;              
+                }
+                    .wrapper {
+                    width: auto;
+                    margin: 0 16px; /* 가운데 정렬 */
+                }
+                    #wrap {
+                    /* 1260+30+30 =1320*/
+                    min-width: 0;
+                }
+}/*@media*/
