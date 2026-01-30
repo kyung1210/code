@@ -82,14 +82,23 @@ header .gnb .gnb_open{/*모바일에서만 보임*/
                 font-weight: 700;
             }
 
-}
-
-
+}/*//@media*/
 .visual{
     background: url(../images/visual_bg.jpg) no-repeat center center / cover;
     color: #fff;
     border-radius: 0 0 200px 0;
     text-align: center;
+}
+.visual::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    background-color: #f7f7f7;
+
 }
 .visual .wrapper{
     height: 900px;
@@ -118,7 +127,7 @@ header .gnb .gnb_open{/*모바일에서만 보임*/
     left: 0px;
     width: 100%;
     height: 60px;
-    background: url(../images/icon_camera.svg) no-repeat center / contain;
+    background: url(../images/photo_camera.svg) no-repeat center / contain;
 }
 
 .visual .picture:hover{
@@ -162,12 +171,290 @@ header .gnb .gnb_open{/*모바일에서만 보임*/
                             top:18px;
                             height: 24px;
                         }
-                    }
+}/*media*/
+.culture{
+    padding: 182px 0 117px 0 ;
+    background-color: #f7f7f7;
+
+}
+.culture .wrapper{
+    position: relative;/*more 정렬의 기준*/
+}
+.culture .tit{
+    margin: 0 130px 0 0;/*더보기가 들어갈 자리를 여백으로 줌*/
+}
+.culture .tit h2{
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 1.3;
+    color: #1d1d1d;
+    margin: 0 0 13px 0;
+}
+.culture .tit h2 br{
+    display: none;/*pc에 줄바꿈 안함*/
+}
+.culture .list{
+    margin: 54px 0 0 0;
+
+}
+.culture .list ul{
+    display: flex;/* 좌우 정렬*/
+    justify-content: space-between;
+}
+.culture .list ul li{
+    width: calc(33.33% - 16px);
+    /* 
+            이 계산법 많이 씀, 앞뒤로 여백 띄워야 계산됨*/
+            /*100%/li의 갯수
+            100%/3 - (24+24)/3
+            33.33% - 16px
+    */
+}
+.culture .list ul li a{
+    display: block;
+}
+.culture .list ul li a .photo{
+    overflow: hidden;
+}
+.culture .list ul li a .photo img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    vertical-align: top;
+    transition: 0.3s;
+}
+.culture .list ul li a:hover .photo img{
+    transform: scale3d(1.125, 1.125, 1);
+}
+.culture .list ul li a h3{
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 1.3;
+    color: #1d1d1d;
+    margin: 31px 0 14px 0;
+}
+.culture .more::after{
+    content: "";
+    position: absolute;
+    right: 16px;
+    top: 13px;
+    width: 15px;
+    height: 12px;
+    background:url(../images/more.jpg)no-repeat center center / contain;
+}
+.culture .more:hover{
+    background-color: #002180;
+    border-color: #002180;
+    color: #fff;
+}
+.culture .more:hover::after{
+    background-image: url(../images/more_on.svg);
+}/*배경 이미지만 교체되면 backgroung-image만*/
+
+.culture .list ul li a h3{
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 1.3;
+    color: #1d1d1d;
+    margin: 31px 0 14px 0;
+}
+.culture .list ul li a h3 span{
+    position: relative;/*after 정렬의 기준*/
+}
+.culture .list ul li a h3 span::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 1px;
+    background: #1d1d1d;
+    transition: 0.3s;
+}
+.culture .list ul li a:hover h3 span::after{
+    width: 100%;
+}
+.culture .more{
+    position: absolute;/*wrapper를 기준으로 정렬*/
+    right: 0;
+    top: 0;
+    border: 1px solid #1d1d1d;
+    border-radius: 30px;
+    padding: 7px 42px 6px 28px;
+}
+@media screen and (max-width: 768px){
+        .culture{
+            padding: 111px 93px 117px 0 ;
+        }
+        .culture .tit{
+            margin: 0 40px 0 0;/*더보기가 들어갈 자리를 여백으로 줌*/
+        }
+        .culture .tit h2{
+            font-size: 28px;
+            margin: 0;
+        }
+        .culture .tit h2 br{
+            display: block;/*pc에 줄바꿈 안함*/
+        }
+        .culture .list{
+            margin: 37px 0 0 0;
+        }    
+        .culture .list ul{
+            flex-direction: column;/*flex 아래로 전환*/
+            gap: 37px 0;
+        }    
+        .culture .tit p{
+            display: none;
+        }
+        .culture .list ul{
+            display: flex;/* 좌우 정렬*/
+            justify-content: space-between;
+        }
+        .culture .list ul li{
+            width: auto;
+        /*100%를 주는 것보다 문제가 없다면 auto가 좋음
+        블록요소는 auto를 주도 100%가 됨*/
+        }
+            .culture .list ul li a{
+                display: block;
+        }
+        .culture .list ul li a .photo{
+            overflow: hidden;
+        }
+        .culture .list ul li a .photo img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            vertical-align: top;
+            transition: 0.3s;
+        }
+        .culture .list ul li a:hover .photo img{
+            transform: scale3d(1.125, 1.125, 1);
+        }
+        .culture .list ul li a h3{
+            font-size: 20px;
+            margin: 20px 0 13px 0;
+        }
+        .culture .more{
+            right: 0;
+            top: 30px;
+            border-radius: 50%;
+            padding: 0;
+            width: 35px;
+            height: 35px;
+        }
+        .culture .more::after{
+            right: 10px;
+            top: 11px;
+        }
+        .culture .more:hover{
+            background-color: #002180;
+            border-color: #002180;
+            color: #fff;
+        }
+        .culture .more:hover::after{
+            background-image: url(../images/more_on.svg);
+        }/*배경 이미지만 교체되면 backgroung-image만*/
+
+        .culture .list ul li a h3{
+            font-size: 24px;
+            font-weight: 700;
+            line-height: 1.3;
+            color: #1d1d1d;
+            margin: 31px 0 14px 0;
+        }
+        .culture .list ul li a h3 span{
+            position: relative;/*after 정렬의 기준*/
+        }
+
+        .culture .list ul li a h3 span::after{
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            height: 1px;
+            background: #1d1d1d;
+            transition: 0.3s;
+        }
+        .culture .list ul li a:hover h3 span::after{
+            width: 100%;
+        }
+        .culture .more span{
+            display: none;
+        }
+}/*@media*/  
+
+.tout{
+    margin: 149px 0 125px 0;
+}
+.tout .wrapper{
+    position: relative;
+    
+}
+.tout .tit{
+    margin: 0 130px 0 0;
+}
+.tout .tit h2{
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 1.3;
+    color: #1d1d1d;
+    margin: 0 0 13px 0;
+}
+.tout .tit h2 br{
+    display: none;/*pc에 줄바꿈 안함*/
+}
+.tout .list{
+    margin: 44px 0 0 0;
+
+}
+.tout .list ul{
+    display: flex;/* 좌우 정렬*/
+    justify-content: space-between;
+}
+.tout .list ul li{
+    width: 190px;
+}
+.tout .list ul li.active{
+    width: 654px;
+}
+.tout .list ul li a{
+    display: flex;/*h3 p를 아래로 정령*/
+    flex-direction: column;
+    justify-content: flex-end;
+    height: 426px;
+    background: url(../images/culture_img1.jpg)no-repeat center center / cover;
+    color: #fff;
+}
+.tout .list ul li.tour02 a{
+    background-image: url(../images/culture_img2.jpg);
+}
+.tout .list ul li.tour03 a{
+    background-image: url(../images/culture_img3.jpg);
+}
+.tout .list ul li.tour04 a{
+    background-image: url(../images/culture_img3.jpg);
+}
+
+
+
+
+
+
+.tout .more{
+    position: absolute;/*레퍼를 기준으로 정렬*/
+}
+
+
+
+
+
 
 
 
 
 
 .footer{
-    margin: 500px 0 0 0;
+    margin: 1000px 0 0 0;
 }
