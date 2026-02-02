@@ -355,10 +355,12 @@
 .tour .list ul li a{
     display: flex;/* h3와 p를 세로로 아래로 정렬*/
     flex-direction: column;
-    justify-content: flex-end;
+    justify-content: flex-end;/* 바댝에 맞추어 정렬*/
     height: 426px;
     background: url(../images/tour01.jpg)no-repeat center center / cover;
     color: #fff;
+    padding: 0 0 53px 0;
+    text-align: center;
 }
 .tour .list ul li.tour02 a{
     background-image: url(../images/tour02.jpg);
@@ -369,6 +371,33 @@
 .tour .list ul li.tour04 a{
     background-image: url(../images/tour04.jpg);
 }
+.tour .list ul li.active a{
+    text-align: left;
+    padding: 0 40px 40px 40px;
+}
+.tour .list ul li a h3{
+    font-size: 24px;
+    font-weight: 700;
+}
+.tour .list ul li:active a p{
+    display: block;
+    margin: 13px 0 0 0;
+  
+}
+.tour .list ul li a p{
+    display: none; /* 숨김, none으로 하면*/
+    position: relative; /* after 정렬기준*/
+}
+.tour .list ul li a p::after{
+    content: "";
+    position: absolute;/*p 태그를 기준으로 정렬*/
+    right: 0;
+    bottom: 0;
+    width: 33px;
+    height: 33px;
+    background: url(../images/more.svg) no-repeat center center /contain;
+}
+
 .tour .more{
     position: absolute;/*wrapper를 기준으로*/
     right: 0;
@@ -398,9 +427,10 @@
     background-image만*/
     background-image: url(../images/more_on.svg);
 } 
+
 @media screen and (max-width: 768px){
             .tour{
-                padding: 117px 0 96px 0;
+                padding: 80px 0 70px 0;
             }
             .tour .tit{/*더보기가 들어갈 자리에 여백을 줌*/
                 margin: 0 40px 0 0; 
@@ -412,9 +442,60 @@
             .tour .tit h2 br{/*pc에서는 줄바꿈 안됨*/
                 display: block;
             }
+           
             .tour .list{
+                 margin: 37px 0 0 0;
+                 overflow-x: auto;/*리스트와 스크롤 관계*/
+            }
+            .tour .list ul{
+                display: flex;/*list 좌우배치*/
+                justify-content: space-between;
+            }
+       
+            .tour .list ul li{
+                width: 1048px;
+            }
+            .tour .list ul li.active{/* active 클래스가 있는 li*/
+                width: 250px;
+            }
+            .tour .list ul li a{
+                height: 352px;
+                color: #fff;
+                padding: 0 24px 24px 24px;
+                text-align: left;
+            }
+            .tour .list ul li.tour02 a{
+                background-image: url(../images/tour02.jpg);
+            }
+            .tour .list ul li.tour03 a{
+                background-image: url(../images/tour03.jpg);
+            }
+            .tour .list ul li.tour04 a{
+                background-image: url(../images/tour04.jpg);
+            }
+            .tour .list ul li.active a{
+                padding: 0 24px 24px 247px;
+            }
+            .tour .list ul li a h3{
+                font-size: 24px;
+                
+            }
+            .tour .list ul li:active a p{
+                display: block;
+                margin: 12px 0 0 0;
+            }
+            .tour .list ul li a p{
+                display: none; /* 숨김, none으로 하면*/
+                position: relative; /* after 정렬기준*/
+            }
+            .tour .list ul li a p{
+                display: block; 
                 margin: 37px 0 0 0;
             }
+            .tour .list ul li a p::after{
+                display: none; /* 숨김 */
+            }
+            
             .tour .more{
                 right: 0;
                 top: 30px;
@@ -431,7 +512,263 @@
             }
 }/*@media*/
 
+.community{
+    background: url(../images/community_bg.jpg) no-repeat center center / cover;
+    color: #fff;
+    padding: 158px 0 185px 0; 
+}
+.community .wrapper {
+    display: flex; /*tit - group 좌우배치*/
+    justify-content: space-between;
+}
+.community .tit h2{
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 1.3;
+    margin: 0 0 17px ;
+}
+.community .group{
+    display: flex;/* 노티스 서비스 좌우 정렬*/
+    gap: 0 24px;
+    align-items: flex-end;/* 아래를 기준으로 정렬*/
+}
+.community .group .notice{
+    width: 523px;
+    height: 419px;
+    border-radius: 15px;
+    background-color: rgba(13,25, 60, 0.4);
+    padding: 50px 40px 0 40px;
+    /*높이가 있으면 아래 여백 절대 아래 주지 않음, 
+    4군데 여백 주지 않음 늘어남*/
+    backdrop-filter: blur(20px);
+    position: relative
+}
+
+.community .group .notice h3{
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 1.3;
+}
+.community .group .notice .list{
+    margin: 23px 0 0 0;
+}
+.community .group .notice .list ul li{
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+.community .group .notice .list ul li:first-child{
+    border-top: none;/* li중에서 첫번째 li는 선 안줌*/
+}
+.community .group .notice .list ul li a{
+    display: flex;/* h4 - span 좌우배치*/
+    justify-content: space-between;
+    padding: 12px 0;
+}
+.community .group .notice .list ul li a h4{
+    width: calc(100% - 95px); /* h4 넓이는 오른쪽에 날짜가 들어갈 공간 빼고 나머지 전체 다
+    1줄로 제한*/
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.community .group .notice .list ul li a:hover h4{
+    color: #002180;
+    font-weight: 700;
+}
+.community .group .notice .more{
+    position: absolute;
+    right: 40px;
+    top: 55px;
+    width: 25px;
+    height: 25px;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    background: url(../images/community_notice.svg) no-repeat center center / contain;
+    /* 백그라운드 사이즈에 넓이만 입력하면 높이는 알아서 들어감*/
+}
+/****************notiec 오버시 했을 때**********/
+.community .group .notice:hover{
+    background-color: #fff;
+    color: #1d1d1d;
+} 
+.community .group .notice:hover .list ul li{
+    border-top: 1px solid #ccc;
+} 
+.community .group .notice:hover .more{
+    border-color: #002180;
+    background-image:url(../images/community_notice_hover.svg)
+    /* 백그라운드 사이즈에 넓이만 입력하면 높이는 알아서 들어감*/
+} 
+.community .group .service {
+    width: 324px;
+    /* li 넓이 * 2 + 여백 = 324 */
+
+}   
+.community .group .service ul{
+    display: flex; /*좌우 배치*/
+    flex-wrap: wrap;/*아래 배치*/
+    gap: 24px 24px;
+}   
+.community .group .service ul li{
+    width: calc(50% - 12px);
+    /*
+     100%/ 한줄에 표시될 li개수  - 한줄의 중간 여백의 합 / 한줄에 표시될 li의 개수
+     = 100% / 2 - 24 / 2
+     = 50% - 12px
+    */
+}
+.community .group .service ul li a{
+    display: block;
+    height: 140px;
+    background-color: rgba(13,25, 60, 0.4);
+    border-radius: 15px;
+    backdrop-filter: blur(20px);
+    padding: 30px 0 0 30px;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 1.3;
+    position: relative/*정렬기준*/; 
+}
+.community .group .service ul li a::after{
+    content: "";
+    position: absolute;
+    right: 28px;
+    bottom: 28px;
+    width: 29px;
+    height: 29px;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+.community .group .service ul li.icon01 a::after{
+    background-image: url(../images/service01.svg);
+}
+.community .group .service ul li.icon02 a::after{
+    background-image: url(../images/service02.svg);
+}
+.community .group .service ul li.icon03 a::after{
+    background-image: url(../images/service03.svg);
+}
+.community .group .service ul li.icon04 a::after{
+    background-image: url(../images/service04.svg);
+}
+.community .group .service ul li a:hover{
+    background-color: #fff;
+    color: #1d1d1d;
+}
+@media screen and (max-width: 768px){
+            .community{
+                padding: 117px 0 102px 0; 
+            }
+            .community .wrapper {
+                display: block; /*tit - group 좌우배치*/
+            }
+            .community .tit h2{
+                font-size: 28px;
+                margin: 0 0 7px 0;
+            }
+            .community .tit h2 br{
+                display: none;
+
+            }
+            .community .tit p br{
+                display: none;
+            }
+            .community .group{
+                display: block;/* 노티스 서비스 좌우 정렬*/
+                margin: 36px 0 0 0;
+                /*align-items: flex-end;/* 아래를 기준으로 정렬
+                gap: 0 24px; 플랙스인 경우만 먹음*/
+            }
+            .community .group .notice{
+                width: auto;
+                height: auto;
+                padding: 33px 24px 32px 24px;
+            }
+
+            .community .group .notice h3{
+                font-size: 24px;
+            }
+            .community .group .notice .list{
+                margin: 20px 0 0 0;
+            }
+            .community .group .notice .list ul li a{
+                padding: 8px 0 7px 0;
+            }
+            .community .group .notice .more{
+                right: 24px;
+                top: 35px;
+                width: 28px;
+                height: 28px;
+                background-size: 9px;
+            }
+            /****************notiec 오버시 했을 때**********/
+            .community .group .service {
+                width: auto;
+                margin: 16px 0 0 0;
+                /* li 넓이 * 2 + 여백 = 324 */
+
+            }   
+            .community .group .service ul{
+                gap: 16px 16px;
+            }   
+            .community .group .service ul li{
+                width: calc(50% - 8px);
+                /*
+                100% / 한줄에 표시될 li개수  - 한줄의 중간 여백의 합 / 한줄에 표시될 li의 개수
+                = 100% / 2 - 16 / 2
+                = 50% - 8px
+                */
+            }
+            .community .group .service ul li a{
+                height: 92px;
+                padding: 33px 0 0 24px;
+                font-size: 20px;
+            }
+            .community .group .service ul li a::after{
+                right: 21px;
+                bottom: 33px;
+                width: 24px;
+                height: 24px;
+                background-size: contain;
+            }
+}
 
 footer{
-    margin: 800px 0 0 0;
+    padding: 85px 0 89px 0;
+    background-color: #1d1d1d;
+    color: rgba(255,255, 255,0.8);
 }
+.footer .f_nav ul{
+    display: flex;
+    gap: 0 38px;
+    flex-wrap: wrap;
+
+}
+footer .f_nav ul li{
+    position: relative;
+}
+footer .f_nav ul li::after{
+    content: "";
+    position: absolute;
+    right: -21px;
+    top: 7px;
+    width: 1px;
+    height: 12px;
+    background-color: rgba(255, 255, 255, 0.8);
+}
+footer .f_nav ul li:last-child::after{
+    display: none;
+}
+
+.footer .f_info {
+    display: flex;
+    gap: 2px 28px;
+    flex-wrap: wrap;
+    margin: 27px 0 25px 0;
+}
+.footer .copyright .license{
+    font-size: 15px;
+    color: rgba(255, 255, 255, 0.6);
+    text-decoration: underline;
+}
+
+
