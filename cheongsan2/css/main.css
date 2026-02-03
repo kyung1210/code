@@ -10,7 +10,8 @@
     width: 100%;
     height: 100px;
     border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-} 
+    transition: top 0.3s;
+} /* top 속성의 변화면 transition 줌*/
 .header .wrapper{
     display: flex;/*logo-gnb-util 좌우배치*/
     justify-content: space-between;
@@ -18,10 +19,10 @@
 }
 .header .logo a{
     display: block;
+    width: 183px;
+    height: 38px;
+    background: url(../images/logo.svg) no-repeat center center /contain;
 }
-.header .logo a img{
-    vertical-align: top;
-} 
 .header .gnb .gnb_open{
     display: none;/*모바일에서만 보임*/
 }
@@ -54,6 +55,29 @@
     height: 32px;
     background: url(../images/weather.svg) no-repeat center center;
 }
+/*-----------------------------------------------------------------------------*/
+.header.fixed{
+    position: fixed;/*바디랑 정렬*/
+    background-color: #fff;
+    color: #3d3d3d;
+    background-color: #ededed;
+}
+.header.fixed.hide{
+    top: -105px;
+}
+.header.fixed .logo a{
+    background-image: url(../images/);
+}
+.header.fixed .gnd .gnb_wrap ul li a{
+    color: #1d1d1d;
+}
+.header.fixed .util .weather::before{
+    background-image: url(../images/);
+}
+
+
+
+/*-------------------------------------------------------------------------------*/
 @media screen and (max-width: 768px){
             .header{
                 height: 56px;
@@ -61,7 +85,7 @@
             .header .wrapper{
                 margin-right: 0;/*오른쪽 여백 삭제*/
             }
-            .header .logo a img{
+            .header .logo a{
                 width: 103px;/*넓이만 주면 자동*/
             }
             .header .gnb .gnb_open{
@@ -78,6 +102,12 @@
             }
             .header .util{/*내용 지움 모바일에서 유틸 안나오게*/
                 display: none;
+            }
+            .header.fixed .gnb .gnb_open{
+                background-image: url(../images/);
+            }
+            .header.fixed{
+
             }
 }/*@media*/
 .visual{
@@ -449,14 +479,16 @@
             }
             .tour .list ul{
                 display: flex;/*list 좌우배치*/
-                justify-content: space-between;
+                gap: 0 16px;
             }
        
             .tour .list ul li{
-                width: 1048px;
+                flex: 1 1 0%;
+                transition: 0.3s;
+                overflow: hidden;/*넘치는 요소 p태그 숨김*/
             }
             .tour .list ul li.active{/* active 클래스가 있는 li*/
-                width: 250px;
+                flex: 3 0 0%;
             }
             .tour .list ul li a{
                 height: 352px;
@@ -480,7 +512,7 @@
                 font-size: 24px;
                 
             }
-            .tour .list ul li:active a p{
+            .tour .list ul li.active a p{
                 display: block;
                 margin: 12px 0 0 0;
             }
@@ -741,10 +773,12 @@ footer{
     display: flex;
     gap: 0 38px;
     flex-wrap: wrap;
-
 }
 footer .f_nav ul li{
-    position: relative;
+    position: relative;/* after 정렬의 기준*/
+}
+footer .f_nav ul li:nth-child(1) a{
+    font-family: 700;
 }
 footer .f_nav ul li::after{
     content: "";
@@ -758,7 +792,6 @@ footer .f_nav ul li::after{
 footer .f_nav ul li:last-child::after{
     display: none;
 }
-
 .footer .f_info {
     display: flex;
     gap: 2px 28px;
