@@ -27,6 +27,7 @@ button{
     font-weight: inherit;
     line-height: inherit;
     cursor: pointer;
+    color: inherit;
 }
 /*브라우저 기본 여백등 초기화*/
 * {
@@ -34,8 +35,6 @@ button{
     padding: 0;
     box-sizing: border-box;/*여백 주어도 싸고 있는 외부 박스는 변동 금지*/
 }
-
-
 
 
 
