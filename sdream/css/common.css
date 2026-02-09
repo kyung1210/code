@@ -1,0 +1,46 @@
+/* 홈페이지 전체 공통스타일에 들아거(layout.css)라고도함
+프로젝트마다 변경됨, 이 css 속성을 수정하면 전체 프로젝트 비틀어짐*/
+body {
+    font-family: "NanumSquareNeo", sans-serif;
+    font-size: 17px;
+    font-weight: 400;
+    color: #515662;
+    line-height: 1.5;
+    word-break: keep-all;/*단어단위로 줄바꿈*/
+}
+.wrapper {
+    width: 1260px;/*브라우저 1920*/
+    margin: 0 auto; /* 가운데 정렬 */
+}
+#wrap {
+    /* 1260+30+30 =1320*/
+    min-width: 1320px;
+    position: relative; /* header 정렬의 기준*/
+}
+@media screen and (max-width: 768px){
+    body{
+        font-size: 16px;
+    }
+    .wrapper{
+        width: auto;
+        margin: 0 16px;
+    }
+    #wrap{
+        min-width: 0;
+    }
+}
+
+/* html 표준상 입력해야하는 태그이지만 홈페이지에 나오지 않는
+ 태그에 주는 글래스*/
+.sr-only, .skip, .blind  {
+    position: absolute !important;
+    width: 1px !important;
+    height: 1px !important;
+    padding: 0 !important;
+    margin: -1px !important;
+    overflow: hidden !important;
+    clip: rect(0, 0, 0, 0) !important;
+    white-space: nowrap !important;
+    border: 0 !important;
+}
+
