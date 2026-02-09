@@ -219,6 +219,7 @@ background: url(../images/visual_scroll.svg) no-repeat center center;
     line-height: 1.3;
     color: #2e3138;
     margin: 10px 0 0 0; 
+    
 }
 .biz .list {
     width: 832px;
@@ -334,6 +335,9 @@ background: url(../images/visual_scroll.svg) no-repeat center center;
                 width: auto;
                 /* 100% / 한줄에 나오는 li 갯수 - 한줄의 여백의 합/한줄에 나오는 li 개수*/
             }
+               .biz .list ul li:nth-child(even){
+               transform: none;
+           }
             .biz .list ul li a{
                 height:150px;
                 border-radius: 10px;
