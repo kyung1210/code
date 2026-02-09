@@ -4,21 +4,134 @@ ctrl+a 누르면 전체선택 딜리트 후 3개의  @import url 만 남김 */
 @import url(fonts.css);
 @import url(common.css); 
 
+.header{
+    position: fixed;/*fixed는  body를 지준으로 정렬*//*wrap 기준 정렬*/
+    left: 0;
+    top: 0;
+    z-index: 100;/* 내가 맨위*/
+    width: 100%;
+    height: 90px;
+    color: #fff;
+    transition:  background-color 0.3s, color 0.3s;
+}
+.header .wrapper{
+    display: flex;/*logo와 gng와 유틸 좌우 배치*/
+    justify-content: space-between;
+}
+.header .logo{
+    margin: 20px 0 0 0;
+}
+.header .logo a{
+    display: block;
+    width: 128px;
+    height: 43px;
+    background: url(../images/logo.svg) no-repeat center center / contain;
+}
+.header .gnb .gnb_open,
+.header .gnb .gnb_close{
+    display: none;/*모바일에서만 보임*/
+}
+.header .gnb .gnb_wrap ul{
+    display: flex;
+}
+.header .gnb .gnb_wrap ul li a{
+    display: block;
+    line-height: 90px;/*헤더 높이 만큼*/
+    padding: 0 34px;
+    font-size: 20px;
+    font-weight: 800;
+}
+.header .util{
+    display: flex; /* mypage-lang 좌우배치*/
+    gap: 1px;
+}
+.header .util .mypage{
+    display: block;
+    width: 39px;
+    height: 39px;
+    background: url(../images/lang.svg)no-repeat center center / contain;
+    /* 아이콘의 경우 짤리지 않도록 contain*/
+}
+.header .util .lang .lang_open{
+    display: block;
+    width: 39px;
+    height: 39px;
+    background: url(../images/language.svg)no-repeat center center / contain;
+    /* 아이콘의 경우 짤리지 않도록 contain*/
+}
+/***********fixed / over클래스가 추가됐을때(스타일 동일)***************/
+
+.header.fixed,
+.header.over{
+    background-color: #fff;
+    color: #2e3138;
+    border-bottom: 1px solid #ccc;
+    box-shadow: 0 3px 5px rgba(0k, 0, 0, 0.1);
+}
+.header.fixed .logo a,
+.header.over .logo a{
+    display: block;
+    width: 128px;
+    height: 43px;
+    background: url(../images/logo.svg) no-repeat center center / contain;
+}
+.header.fixed .util .lang .lang_open:hover,
+.header.over .util .lang .lang_open:hover{
+    background-image: url(../images/);
+}
+@media screen and (max-width: 768px){
+                .header{
+                height: 56px;
+            }
+            .header .wrapper{
+                margin-right: 0;
+            }
+            .header .logo{
+                margin: 15px 0 0 0;
+            }
+            .header .logo a{
+                width: 79px;
+                height: 26px;
+            }
+            .header .gnb .gnb_open{
+                display: block;
+                width: 56px;
+                height: 56px;
+                background: url(../images/);
+            }
+            .header .gnb .gnb_close{
+                display: block;/*모바일에서만 보임*/
+            }
+            .header .gnb .gnb_wrap{
+                display: none;/*메뉴숨김*/
+            }
+            .header .util{
+                display: none /* mypage-lang 좌우배치*/
+            }
+            /***********fixed / over클래스가 추가됐을때(스타일 동일)***************/
+
+               .header .fixed .gnb .gnb_open,
+               .header .over .gnb .gnb_open{
+                background: url(../images/gnb_open.svg)no-repeat center center / contain;
+                /* 아이콘의 경우 짤리지 않도록 contain*/
+            }
+}
+
 .visual{
     position: relative; /*scroll 정렬의 기준*/
 } 
 .visual .swiper-slide{
-    height: 100vh; /*브라우저 높이*/
-    background: url(../images/visual_bg1.jpg) no-repeat center center / cover;
+    height: 100dvh; /*브라우저 높이*/
+    background: url(../images/visual_bg01.jpg) no-repeat center center / cover;
     color: #fff;
     display: flex;/* wrapper 아래로 정렬하려고*/
     align-items: flex-end;
 }
 .visual .swiper-slide.pop2{
-    background: url(../images/visual_bg2.jpg)no-repeat center center / cover;
+    background: url(../images/visual_bg02.jpg)no-repeat center center / cover;
 } 
 .visual .swiper-slide.pop3{
-    background: url(../images/visual_bg3.jpg)no-repeat center center / cover;
+    background: url(../images/visual_bg03.jpg)no-repeat center center / cover;
 } 
 .visual .swiper-slide h2{
     font-size: 70px;
@@ -75,6 +188,188 @@ background: url(../images/visual_scroll.svg) no-repeat center center;
         }
 
 }
+.biz{
+    margin: 174px 0 0 0;
+}
+.biz .wrapper{
+    display: flex;/*tit, list 좌우 배치*/
+    justify-content: space-between;
+    align-items: flex-start;/* align-item안주면 좌우로 들어가는 요소의 높이가 동리해짐
+    align-item : flex-start를 주면 tit과 list가 각자의 콘텐츠가 존재하는 만큼만 높이가 잡힘*/
+   
+}
+.biz .tit{
+    position: sticky;
+    /*왼쪽에 고정할 요소는 오른쪽의 요소보다 반드시 짧아야 구현이 가능함.
+    좌우 배치를 flexm 했다면 반드시 align-item:flex-start를 추가해 줘야함
+     overflow: hidden; 을 주면 단점으로 작동 안함 */
+    top: 100px;
+    /* sticky를 주면 반드시 top값만 줌(left를 주면 도망감)
+    맨 상단에서 부터 얼만큼 떨어져서 고저앟ㄹ지 위치값임*/
+    border: 1px solid red;
+    
+}
+.biz .tit strong{
+    font-weight: 800;
+    color: #007EF4;
+}
+.biz .tit h2{
+    font-size: 45px;
+    font-weight: 800;
+    line-height: 1.3;
+    color: #2e3138;
+    margin: 10px 0 0 0; 
+}
+.biz .list {
+    width: 832px;
+}
+.biz .list ul{
+    display: flex;/* li를 좌우로 배치*/
+    flex-wrap: wrap;
+    flex-direction: row-reverse;
+    gap: 24px 24px;
+}
+.biz .list ul li{
+    width: calc(50% - 12px);
+    /* 100% / 한줄에 나오는 li 갯수 - 한줄의 여백의 합/한줄에 나오는 li 개수*/
+}
+.biz .list ul li a{
+    display: block;
+    height: 490px;
+    background: url(../images/biz01.jpg) no-repeat center center / cover;
+    color: #fff;
+    border-radius: 20px;
+    position: relative /*txt정렬의 기준*/;
+    overflow: hidden /*p태그가 밖으로 삐져나가지 않게*/;
+}
+.biz .list ul li:nth-child(even){ /*홀수 odd, 짝수 even*/
+   transform: translateY(152px);
+   /*margin으로 여백을 주면 다른 요소가 같이 밀림
+   transform: translateY로 조절하면 괜찬음
+   트랜스폼은 다른 요소에 영향을 끼치지 않음
+   왼쪽에 있는 걸 오른쪽으로 트랜스폼으로 움직이면 겹침..밀리지 않음*/
+}
+.biz .list ul li.biz02 a{
+    background-image: url(../images/biz02.jpg);
+}
+.biz .list ul li.biz03 a{
+    background-image: url(../images/biz03.jpg);
+}.biz .list ul li.biz04 a{
+    background-image: url(../images/biz04.jpg);
+}
+.biz .list ul li.biz05 a{
+    background-image: url(../images/biz05.jpg);
+}
+.biz .list ul li a::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #0065bd;
+    opacity: 0;
+    transition: 0.3s;
+}
+.biz .list ul li a .txt{
+    /* 마우스 오버 애니메이션을 줄대 밑에서 위로 자연스럽게 올라오면서
+    p태그가 나타남, 그래서 a를 기준으로 absoute 줌*/
+    position: absolute;
+    left: 40px;
+    bottom: -40px;
+    width: calc(100% - 80px);/* 좌우 여백의 합 빼기*/
+
+}
+.biz .list ul li a .txt h3{
+    font-size: 32px;
+    font-weight: 800;
+    line-height: 1.3;
+    margin: 0 0 10px 0;
+}
+.biz .list ul li a .txt p { 
+    opacity: 0;
+    transition: 0.3s;
+
+}
+.biz .list ul li a:hover::before{
+    opacity: 0.9;
+}
+.biz .list ul li a:hover .txt{
+    bottom: 50px;
+}
+.biz .list ul li a:hover .txt p{
+    opacity: 1;
+}
+
+@media screen and (max-width: 768px){
+            .biz{
+                margin: 125px 0 0 0;
+            }
+            .biz .wrapper{
+                display: block;/*tit, list 좌우 배치*/
+            }
+            .biz .tit{
+                position: relative; /*sticky해제 */
+                top: auto;/*0이랑 다름, 아예 안 준것처럼 됨*/
+            }
+            .biz .tit h2{
+                font-size: 32px;
+                margin: 6px 0 0 0; 
+            }
+             .biz .tit h2 br{
+                display: none;
+             }
+            .biz .list {
+                width: auto;/*원래 속성대로의 크기, 블록요소로..?
+                그냥 100%하면 안되나요..마진을 좌우로 줘버리면 늘어남*/
+                margin: 42px 0 0 0;
+            }
+            .biz .list ul{
+                flex-wrap: nowrap;
+                flex-wrap: wrap;
+                flex-direction: column;
+                gap: 8px 0;
+            }
+            .biz .list ul li{
+                width: auto;
+                /* 100% / 한줄에 나오는 li 갯수 - 한줄의 여백의 합/한줄에 나오는 li 개수*/
+            }
+            .biz .list ul li a{
+                height:150px;
+                border-radius: 10px;
+            }
+            .biz .list ul li a .txt{
+                position: absolute;
+                left: 20px;
+                bottom: -20px;
+                width: calc(100% -70px);/* 좌우 여백의 합 빼기*/
+            }
+            .biz .list ul li a .txt::after{
+                content: "";
+                position: absolute;
+                right: 0;
+                top: 0;
+                width: 24px;
+                height: 24px;
+                border-radius: 50%;
+                background: #fff url(../images/)no-repeat center center;
+                border: 1px solid red;
+            }
+            .biz .list ul li a .txt h3{
+                font-size:24px;
+                margin:0;
+            }
+             .biz .list ul li a .txt h3{
+
+             }
+            .biz .list ul li a .txt p { 
+               display: none;
+            }
+            .biz .list ul li a:hover .txt{
+                bottom: 20px;/*텍스트와 같아야 함*/
+            }
+            
+}/*@media */
 
 
 

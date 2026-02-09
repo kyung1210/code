@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!--다음 라이브러리가 먼저 와야함-->
     <script src="js/jquery-3.7.1.min.js"></script>
-    <script src="js/swiper-bundle.js"></script>
-    <link rel="stylesheet" href="css/swiper-bundle.css">
+    <script src="js/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="css/swiper-bundle.min.css">
     <!--내가 만들 파일을 연결-->
     <link rel="stylesheet" href="css/swiper_260204.css">
     <script src="js/swiper_260204.js"></script>
@@ -32,97 +32,105 @@
                   <li class="swiper-slide bg3">
                     <div class="wrapper">
                         <h3> 다랑이 논의 사계</h3>
-                        <p></p>
+                        <p>자연과 사람이 공존하며 일구어구들장 논의 곡선을 통해 완벽한 평온함을 만끽해 보세요.</p>
                     </div>
                  </li> 
                </ul>
-            <div class="ctrl_wrap">
-                <div class="paging"></div>  <!-- 컨트롤 요소는 swiper 안에 배치-->
-                <button class="btn prev"><span class="sr-only">이전팝업보기</span></button>
-                <button class="btn next"><span class="sr-only">다음팝업보기</span></button>
-                <button class="btn stop"><span class="sr-only">팝업일시정지</span></button>
-                <button class="btn play"><span class="sr-only">팝업다시시작</span></button>
-            </div><!--//ctrl_wrap-->
+                <div class="ctrl_wrap">
+                    <div class="paging"></div> <!-- 컨트롤 요소는 swiper 안에 배치-->
+                    <button class="btn prev"><span class="sr-only">이전팝업보기</span></button>
+                    <button class="btn next"><span class="sr-only">다음팝업보기</span></button>
+                    <button class="btn stop"><span class="sr-only">팝업 일시정지</span></button>
+                    <button class="btn play"><span class="sr-only">팝업 다시시작</span></button>
+                </div><!--//ctrl_wrap-->
            </div><!--swiper-->
         </section><!--visual-->
         <section class="news">
             <div class="wrapper">
-                <h2>마케팅의 내일을 설계하는 오늘의 인사이트</h>
-                <div class="list">
-                    <div class="swiper"> 
-                      <ul class="swiper-wrapper">
-                          <li class="swiper-slide">
-                            <a href="#n">
-                            <h2>1. 선 넘지 않는 CRM 마케팅의 기술</h2>
-                            <p>월요일 오전 가장 예민한 시간에 우리는 
-                            어김없이 마케팅 메시지의 폭격을  받습
-                            </p>
-                            <div class="photo"><img src="images/visual01.jpg" alt="뉴스"></div>
-                           </a>
-                      </li> 
-                        <li class="swiper-slide">
-                            <a href="#n">
-                            <h3>1. 선 넘지 않는 CRM 마케팅의 기술</h3>
-                            <p>월요일 오전 가장 예민한 시간에 우리는 
-                            어김없이 마케팅 메시지의 폭격을  받습</p>
-                            <div class="photo"><img src="images/visual02.jpg" alt="뉴스"></div>
-                           </a>
-                      </li> 
-                        <li class="swiper-slide">
-                            <a href="#n">
-                            <h3>1. 선 넘지 않는 CRM 마케팅의 기술</h3>
-                            <p>월요일 오전 가장 예민한 시간에 우리는 
-                            어김없이 마케팅 메시지의 폭격을  받습</p>
-                            <div class="photo"><img src="images/visual03.jpg" alt="뉴스"></div>
-                           </a>
-                      </li> 
-                     </ul>
-                    <div class="ctrl_wrap">                   
-                    <button class="prev"><span class="sr-only">이전버튼</span></button>
-                    <button class="next"><span class="sr-only">다음버튼</span></button>
-                    </div>
-                </div>
-            </div>
-        </section>
-                <section class="notice">
+                <h2>마케팅의 내일을 설계하는 오늘의 인사이트</h2>
+                  <div class="list">
+                    <div class="swiper"> <!-- 팝업의 높이와 넓이를 css에서 줄 수 있는 요소 -->
+                        <ul class="swiper-wrapper"> <!-- 각 팝업 콘텐츠를 감싸는 요소 -->
+                            <li class="swiper-slide">
+                                <a href="#n">
+                                    <h3>상세페이지 유입은 많은데, 왜 결제 상세페이지 유입은 많은데, 왜 결제</h3>
+                                    <p>바이럴 마케팅의 본질, 소비자가 마케터가 되는 순간을 만들어보세요! 크라우드펀딩에서 프로젝트 입소문을 낼바이럴 마케팅의 본질, 소비자가 마케터가 되는 순간을 만들어보세요! 크라우드펀딩에서 프로젝트 입소문을 낼 </p>
+                                    <div class="photo"><img src="images/news01.jpg" alt="뉴스이미지"></div>
+                                </a>
+                            </li> 
+                                 <li class="swiper-slide">
+                                <a href="#n">
+                                    <h3>음식물처리기, 다음 '이모 가전'이 될 </h3>
+                                    <p>마케터를 위한 트렌드 인사이트 리포트 [대외비.] 2026년 1월호 음식물처리기, 다음 '이모 가전'이 될 수 있을까? 소</p>
+                                    <div class="photo"><img src="images/news02.jpg" alt="뉴스이미지"></div>
+                                </a>
+                            </li>
+                                 <li class="swiper-slide">
+                                <a href="#n">
+                                    <h3>메가 인플루언서 캐스팅 전에 꼭 알</h3>
+                                    <p>메가 인플루언서에게 콘텐츠를 맡길 때는 '이미 검증된' 스토리가 손에 있는 상태여야 하며, 그 스토리 검증은 반</p>
+                                    <div class="photo"><img src="images/news03.jpg" alt="뉴스이미지"></div>
+                                </a>
+                            </li> 
+                                 <li class="swiper-slide">
+                                <a href="#n">
+                                    <h3>방한 외국인관광객, 올해 2,000만 명</h3>
+                                    <p>2024~2025년 방한 외국인 관광객 순위를 데이터 기반으로 정리했습니다. 올해 한국을 가장 많이 찾은 국가는 어디</p>
+                                    <div class="photo"><img src="images/news04.jpg" alt="뉴스이미지"></div>
+                                </a>
+                            </li> 
+                        </ul>
+                     </div><!--//swiper-->
+                     <div class="ctrl_wrap">
+                        <button class="prev"><span class="sr-only">이전팝업보기</span></button>
+                        <button class="next"><span class="sr-only">다음팝업보기</span></button>
+                     </div><!--//ctrl_wrap-->
+                </div><!--//list-->
+            </div><!--//wrapper-->
+        </section><!--//news-->
+        <section class="notice">
             <div class="wrapper">
-                <h2>마케팅의 내일을 설계하는 오늘의 인사이트</h>
-                <div class="list">
-                    <div class="swiper"> 
-                      <ul class="swiper-wrapper">
-                          <li class="swiper-slide">
-                            <a href="#n">
-                            <h2>1. 선 넘지 않는 CRM 마케팅의 기술</h2>
-                            <p>월요일 오전 가장 예민한 시간에 우리는 
-                            어김없이 마케팅 메시지의 폭격을  받습
-                            </p>
-                            <div class="photo"><img src="images/visual01.jpg" alt="뉴스"></div>
-                           </a>
-                      </li> 
-                        <li class="swiper-slide">
-                            <a href="#n">
-                            <h3>1. 선 넘지 않는 CRM 마케팅의 기술</h3>
-                            <p>월요일 오전 가장 예민한 시간에 우리는 
-                            어김없이 마케팅 메시지의 폭격을  받습</p>
-                            <div class="photo"><img src="images/visual02.jpg" alt="뉴스"></div>
-                           </a>
-                      </li> 
-                        <li class="swiper-slide">
-                            <a href="#n">
-                            <h3>1. 선 넘지 않는 CRM 마케팅의 기술</h3>
-                            <p>월요일 오전 가장 예민한 시간에 우리는 
-                            어김없이 마케팅 메시지의 폭격을  받습</p>
-                            <div class="photo"><img src="images/visual03.jpg" alt="뉴스"></div>
-                           </a>
-                      </li> 
-                     </ul>
-                    <div class="ctrl_wrap">                   
-                    <button class="prev"><span class="sr-only">이전버튼</span></button>
-                    <button class="next"><span class="sr-only">다음버튼</span></button>
-                    </div>
-                </div>
-            </div>
-        </section>
+                <h2>마케팅의 내일을 설계하는 오늘의 인사이트</h2>
+                  <div class="list">
+                    <div class="swiper"> <!-- 팝업의 높이와 넓이를 css에서 줄 수 있는 요소 -->
+                        <ul class="swiper-wrapper"> <!-- 각 팝업 콘텐츠를 감싸는 요소 -->
+                            <li class="swiper-slide">
+                                <a href="#n">
+                                    <h3>상세페이지 유입은 많은데, 왜 결제 상세페이지 유입은 많은데, 왜 결제</h3>
+                                    <p>바이럴 마케팅의 본질, 소비자가 마케터가 되는 순간을 만들어보세요! 크라우드펀딩에서 프로젝트 입소문을 낼바이럴 마케팅의 본질, 소비자가 마케터가 되는 순간을 만들어보세요! 크라우드펀딩에서 프로젝트 입소문을 낼 </p>
+                                    <div class="photo"><img src="images/news01.jpg" alt="뉴스이미지"></div>
+                                </a>
+                            </li> 
+                                 <li class="swiper-slide">
+                                <a href="#n">
+                                    <h3>음식물처리기, 다음 '이모 가전'이 될 </h3>
+                                    <p>마케터를 위한 트렌드 인사이트 리포트 [대외비.] 2026년 1월호 음식물처리기, 다음 '이모 가전'이 될 수 있을까? 소</p>
+                                    <div class="photo"><img src="images/news02.jpg" alt="뉴스이미지"></div>
+                                </a>
+                            </li>
+                                 <li class="swiper-slide">
+                                <a href="#n">
+                                    <h3>메가 인플루언서 캐스팅 전에 꼭 알</h3>
+                                    <p>메가 인플루언서에게 콘텐츠를 맡길 때는 '이미 검증된' 스토리가 손에 있는 상태여야 하며, 그 스토리 검증은 반</p>
+                                    <div class="photo"><img src="images/news03.jpg" alt="뉴스이미지"></div>
+                                </a>
+                            </li> 
+                                 <li class="swiper-slide">
+                                <a href="#n">
+                                    <h3>방한 외국인관광객, 올해 2,000만 명</h3>
+                                    <p>2024~2025년 방한 외국인 관광객 순위를 데이터 기반으로 정리했습니다. 올해 한국을 가장 많이 찾은 국가는 어디</p>
+                                    <div class="photo"><img src="images/news04.jpg" alt="뉴스이미지"></div>
+                                </a>
+                            </li> 
+                        </ul>
+                     </div><!--//swiper-->
+                     <div class="ctrl_wrap">
+                        <button class="prev"><span class="sr-only">이전팝업보기</span></button>
+                        <button class="next"><span class="sr-only">다음팝업보기</span></button>
+                     </div><!--//ctrl_wrap-->
+                </div><!--//list-->
+            </div><!--//wrapper-->
+        </section><!--//notice-->
     </div>
 </body>
 </html>
