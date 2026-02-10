@@ -56,7 +56,7 @@ ctrl+a 누르면 전체선택 딜리트 후 3개의  @import url 만 남김 */
     display: block;
     width: 39px;
     height: 39px;
-    background: url(../images/language.svg)no-repeat center center / contain;
+    background: url(../images/gnb_open.svg)no-repeat center center / contain;
     /* 아이콘의 경우 짤리지 않도록 contain*/
 }
 /***********fixed / over클래스가 추가됐을때(스타일 동일)***************/
@@ -73,11 +73,11 @@ ctrl+a 누르면 전체선택 딜리트 후 3개의  @import url 만 남김 */
     display: block;
     width: 128px;
     height: 43px;
-    background: url(../images/logo.svg) no-repeat center center / contain;
+    background: url(../images/lang.svg) no-repeat center center / contain;
 }
 .header.fixed .util .lang .lang_open:hover,
 .header.over .util .lang .lang_open:hover{
-    background-image: url(../images/);
+    background-image: url(../images/logo.svg);
 }
 @media screen and (max-width: 768px){
                 .header{
@@ -97,7 +97,7 @@ ctrl+a 누르면 전체선택 딜리트 후 3개의  @import url 만 남김 */
                 display: block;
                 width: 56px;
                 height: 56px;
-                background: url(../images/);
+                background: url(../images/gnb_open.svg);
             }
             .header .gnb .gnb_close{
                 display: block;/*모바일에서만 보임*/
@@ -371,6 +371,44 @@ background: url(../images/visual_scroll.svg) no-repeat center center;
             }
             
 }/*@media */
+.news{
+    background-color: #3f6f9f;
+    margin: 124px 0 0 0;
+    padding: 174px 0 113px 0;
+    border: 2px solid red;
+}
+.new .tit strong{
+    border: 1px solid red;
+}
+.news .tit h2{
+  font-size: 45px;
+  font-weight: 800;
+  line-height: 1.3;
+  color: #2e3138;
+  margin: 10px 0 0 0;
+  border: 2px solid blue;
+}
+.news .list{
+    margin: 31px 0 0 0;
+    border: 2px solid red;
+}
+.news .tit strong{
+    font-weight: 800;
+    color: #0065bd;
+}
+.news .list ul li+li{
+    margin-top: 150px;
+}
+.news .list ul li{
+    margin-top: 0;
+}
+.news .list ul li a{
+    display: flex;
+    padding: 25px 40px 21px 40px;
+    border-color: #fff;
+    box-sizing: 0 0 5px 0 rgba(0, 0, 0, 0.1);
+    border: 1px solid red;
+}
 
 
 
