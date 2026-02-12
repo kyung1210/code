@@ -1,0 +1,107 @@
+@import url(default.css);
+@import url(pretendard.css);
+@import url(common_res.css);
+
+section h2{
+    font-size: var(--font-size-tit);
+    font-weight: var(--font-weight-tit);
+    line-height: var(--line-height-tit);
+    color:var(--color-tit);
+    margin: 3em 0 0.3em 0;
+    /* em은 지금 요소의 글자 크기를 1em으로 복고 계산*/
+}
+/*
+    <h2></h2>
+    <p></P> 이렇게 코딩된 경우 (즉 p태그가 있는 경우)
+*/
+section h2 + p{
+    margin: 0 0 var(--font-size-tit) 0;
+}
+section h2 + .list{
+    margin: 0 0 var(--font-size-tit) 0 0 0;
+}
+.svg_bg .list{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0 2rem;/*백분율 계산기로 함*/
+}
+.svg_bg .list .more{
+    display: block;
+    border: 1px solid var(--color-main);
+    color: var(--color-main);
+    font-size: clamp(1.6rem, 2.5vw, 3rem);/*글자 크기만 rem사용*/
+    font-weight: var(--font-weight-tit);
+    /*글자크기는 rem주고 여백 등의 다른 단위는 em으로 줌
+    현재 요소의 글자크기를 1em으로 환산한 단위*/
+    border-radius: 1.3333rem;
+    padding: 0.6333rem 2.8333rem 0.5333rem 1.8rem;
+    position: relative;/*정렬기준*/
+}
+.svg_bg .list .more::after{
+    content: "";
+    position: absolute;
+    right: 1.7667rem;
+    top: 1rem;
+    width: 0.7rem;
+    height: 0.7rem;
+    background: url(../images/icon_more_svg.svg)no-repeat center center /contain;
+    border: 1px solid red;
+}
+.svg_bg .list .more:hover{
+    color: var(--color-sub);
+    border-color: var();
+}
+.svg_bg .list .lang{
+    color: var(--color-main);
+    font-size: clamp(1.6rem, 2.5vw, 3rem);/*글자 크기만 rem사용*/
+    font-weight: var(--font-weight-tit);
+    /*글자크기는 rem주고 여백 등의 다른 단위는 em으로 줌
+    현재 요소의 글자크기를 1em으로 환산한 단위*/
+    border-radius: 1.3333rem;
+    padding: 0 0 0 1.5rem;
+    position: relative;
+    border: 1px solid red;
+}
+.svg_bg .list .lang::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);/*내 크기의 절반*/
+    width: 1.0667em;/* 아이콘 크기*/
+    height: 1.0667em;
+    background: url(../images/icon_lang.svg.svg) no-repeat center center / contain;
+}
+.svg_bg .list .lang:hover{
+    color: var(--color-sub);
+}
+.svg_bg .list .mypage{
+    color: var(--color-main);
+    font-size: clamp(1.6rem, 2vw, 2rem);/*글자 크기만 rem사용*/
+    font-weight: var(--font-weight-tit);
+    padding: 2.45em 0 0 0;
+    position: relative;/* before 정렬의 기준*/
+}
+.svg_bg .list .mypage::before{
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%);
+    width: 2.5em;
+    height: 2.2em;
+    background: url(../images/icon_mypage.svg) no-repeat center center / contain;
+}
+.svg_bg .list .mypage:hover{
+    color: var(--color-sub);
+}
+.svg_bg .list .gnb_open{
+    width: clamp(56px 8vw, 80px);
+    height: clamp(56px 8vw, 80px);
+    background: url(../images/icon_menu.svg.svg)no-repeat center center / 63.75%;
+}
+.svg_bg .list .gnb_open span{
+    display: none;
+}
+

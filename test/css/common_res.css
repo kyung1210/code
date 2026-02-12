@@ -1,0 +1,44 @@
+
+.wrapper{
+    width: 1260px;
+    margin: 0 auto; 
+}
+#wrap{
+    position: relative;
+}
+html{
+    font-size: 10px;
+}
+body{
+    font-family: "pretendard", sans-serif;
+    font-weight: var(--font-weight-default);
+    font-size: var(--font-size-default);
+    color: var(--color-default);
+    line-height: var(--line-height-default);
+}
+.wrapper{
+    width: 1260px;
+    margin: 0 auto; /* 화면에 가운데 정렬 */
+}
+#wrap{
+    position: relative;/* header 정렬의 기준 */
+}
+@media screen and (max-width:1361px){/* 브라우저 넓이가 768이하일때 (768부터~) */
+                .wrapper{
+                    width: auto;
+                    margin: 0 var(--wrapper-margin);
+                }
+}/*@media*/
+:root{
+    --wrapper-margin: 4vw;
+    --font-size-default: clamp(1.6rem, 2.2vw, 1.7rem);
+    --font-size-tit: clamp(28px, 3.3vw, 4rem);
+    --font-weight-default: 400;
+    --font-weight-tit: 700;
+    --color-default: #3d3d3d;
+    --color-tit: #1d1d1d;
+    --color-main:#2600FF
+    --color-sub:#FF0000
+    --line-height-default: 1.5;
+    --line-height-tit: 1.3;
+}

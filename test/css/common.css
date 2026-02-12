@@ -1,65 +1,41 @@
-/* 태그의 초기화 텍스터 앞 점, 숫자*/
-h1,h2,h3,h4,h5,h6 {
-    font-size: inherit;
-    font-weight: inherit;
-}
-/*브라우저 앵커시 기본 색상 상속, 밑줄 삭제로 초기화*/
-a {
-    color: inherit;
-    text-decoration: none;
-}
-/* 리스트 설정시 문자 앞 점을 삭제*/
-ul, ol, li {
-    list-style: none;
-}
-/*글씨 굵게*/
-strong {
-    font-weight: inherit;
-}
-em, address {
-    font-style: normal;/* 기울어진 글자를 바르게*/
-}
-button{
-    border: none;
-    background: none;
-    font-family: inherit;
-    font-size: inherit;
-    font-weight: inherit;
-    line-height: inherit;
-    cursor: pointer;
-    color: inherit;
-}
-/*브라우저 기본 여백등 초기화*/
-* {
-    margin:0 ;
-    padding: 0;
-    box-sizing: border-box;/*여백 주어도 싸고 있는 외부 박스는 변동 금지*/
-}
-
-
-
-/* 공통스타일 공통 스타일 공통 스타일 공통 스타일 공통 스타일 공통 스타일 공통 스타일 공통스타일 공통스타일
-공통스타일 공통스타일 공통스타일 공통스타일 공통스타일 공통스타일 공통스타일 공통스타일 공통스타일*/
-body {
-    font-family: "pretendard", sans-serif;
-    font-size: 17px;
+/*
+    common.css (layout.css 라고도 함)
+    홈페이지 전체에 적용되는 공통스타일
+    프로젝트마다 변경됨 - 이 css에 있는 속성을 수정하면 프로젝트 전체가 바뀜
+*/
+body{
+    font-family: "NanumSquareNeo", sans-serif;
     font-weight: 400;
-    color: #454b52;
-    line-height: 1.5;
-    word-break: keep-all;/*단어단위로 줄바꿈*/
+    font-size: 17px;
+    color: #515662;
+    line-height: 1.5;/* 배수(글자크기의 몇배) */
+    word-break: keep-all;/* 단어 단위로 줄바꿈 */
 }
-.wrapper {
+.wrapper{
     width: 1260px;
-    margin: 0 auto; /* 가운데 정렬 */
+    margin: 0 auto; /* 화면에 가운데 정렬 */
 }
-#wrap {
-    /* 1260+30+30 =1320*/
+#wrap{
+    /* 1260+30+30 = 1320 */
     min-width: 1320px;
+    position: relative;/* header 정렬의 기준 */
 }
+@media screen and (max-width:768px){/* 브라우저 넓이가 768이하일때 (768부터~) */
+                body{
+                    font-size: 16px;
+                }
+                .wrapper{
+                    width: auto;
+                    margin: 0 16px;
+                }
+                #wrap{
+                    min-width: 0;
+                }
+}/*@media*/
 
-/* hhtml 표준상 입력해야하는 태그이지만 홈페이지에 나오지 않는
- 태그에 주는 글래스*/
-.sr-only, .skip, .blind  {
+/* html 표준때문에 입력해야하는 태그이지만 홈페이지에 나오지 않는
+   태그에 주는 클래스 */
+.sr-only, .skip, .blind {
     position: absolute !important;
     width: 1px !important;
     height: 1px !important;
@@ -70,16 +46,3 @@ body {
     white-space: nowrap !important;
     border: 0 !important;
 }
-@media screen and (max-width:768px){
-                    body {
-                    font-size: 16px;              
-                }
-                    .wrapper {
-                    width: auto;
-                    margin: 0 16px; /* 가운데 정렬 */
-                }
-                    #wrap {
-                    /* 1260+30+30 =1320*/
-                    min-width: 0;
-                }
-}/*@media*/
